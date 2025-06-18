@@ -1,0 +1,39 @@
+1- Dans le projet Angular Connexion au server.js d'acces à la BDD mysql avec websocket
+		accueil.component.ts
+		ligne 33: this.websocketService.connect('ws://127.0.0.1:3000');
+		Definir l'adresse du poste ou se trouve le server.js donc le projet Angular!
+		
+2- Dans le serveur websocket server.js
+		Angular_Capteur_Simplifie\mon-projet-nodejs-rias\server.js	
+		ligne 18: database: 'mysql'
+		Définir le nom de la base SQL ici 'mysql' et non 'base_rias'
+		
+3- Demarrage du server.js 
+		dans une console
+		Angular_Capteur_Simplifie\mon-projet-nodejs-rias>node server.js
+		
+		Retour console:
+			Serveur Node.js démarré sur http://localhost:3000
+			Connecté à la base de données MySQL
+		
+4- Demarrer le site Angular
+		dans une console
+		Angular_Capteur_Simplifie>ng serve --open
+		
+		Retour console:
+			Initial chunk files | Names         | Raw size
+			polyfills.js        | polyfills     | 90.20 kB |
+			main.js             | main          |  8.15 kB |
+			styles.css          | styles        | 96 bytes |
+
+								| Initial total | 98.45 kB
+
+			Application bundle generation complete. [8.924 seconds]
+
+			Watch mode enabled. Watching for file changes...
+			NOTE: Raw file sizes do not reflect development server per-request transformations.
+			  ➜  Local:   http://localhost:4200/
+			  ➜  press h + enter to show help
+		
+5- La page web 'AngularCapteur' affichant les graphiques s'ouvre
+		http://localhost:4200/
